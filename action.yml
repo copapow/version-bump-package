@@ -1,0 +1,33 @@
+name: 'Increment Package Version'
+description: 'Bumps version in package.json based on user defined PR labels'
+branding:
+  icon: 'git-pull-request'
+  color: 'blue'
+inputs:
+  default_branch:
+    description: 'default branch of the project. i.e main or master'
+    required: false
+    default: 'master'
+  github_token:
+    description: 'github token'
+    required: true
+  major_label:
+    description: 'label used to trigger major bump'
+    required: false
+    default: 'major'
+  minor_label:
+    description: 'label used to trigger minor bump'
+    required: false
+    default: 'minor'
+  patch_label:
+    description: 'label used to trigger patch bump'
+    required: false
+    default: 'patch'
+outputs:
+  previous_version:
+    description: 'Previous version in package.json'
+  new_version:
+    description: 'New version in package.json'  
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
