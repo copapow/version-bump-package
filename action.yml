@@ -1,4 +1,4 @@
-name: 'Increment Package Version'
+name: 'Increment Package.json Version'
 description: 'Bumps version in package.json based on user defined PR labels'
 branding:
   icon: 'git-pull-request'
