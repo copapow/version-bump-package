@@ -10,7 +10,7 @@
 
 ```yaml
 - uses: actions/checkout@v2
-- uses: copapow/package-version-bump@v1
+- uses: copapow/version-bump-package@v1
     id: bump
     with:
         major_label: version-major # optional - default = major
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: copapow/package-version-bump@v1
+      - uses: copapow/version-bump-package@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@v7
